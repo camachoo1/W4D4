@@ -38,14 +38,8 @@ def largest_contiguous_subsum_2(list) # O(n)
     current_sum = list.first
 
     (1...list.length).each do |i|
-        if current_sum < 0
-          current_sum = list[i]
-        else 
-          current_sum += list[i]
-        end
-        
-        biggest_sum = current_sum if current_sum >= biggest_sum
-        # debugger
+      current_sum < 0 ? current_sum = list[i] : current_sum += list[i]
+      biggest_sum = current_sum if current_sum >= biggest_sum
     end
 
     biggest_sum
