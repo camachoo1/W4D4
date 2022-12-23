@@ -21,4 +21,8 @@ class StackQueue
   def dequeue
     @pop_stack.pop
   end
+
+  def add_to_pop_stack(item)
+    @pop_stack << @push_stack.pop until @push_stack.empty?
+  end
 end

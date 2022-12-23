@@ -1,5 +1,5 @@
 class MyStack
-  def initialize
+ def initialize
     @store = [] 
  end
 
@@ -19,7 +19,12 @@ class MyStack
    @store.pop
  end
 
- def push(item)
+ def push(item) 
    @store << item
  end
+
+ def max # [5,4,3]
+ end
+ 
 end
+
